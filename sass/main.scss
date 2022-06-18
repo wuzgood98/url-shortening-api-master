@@ -60,7 +60,11 @@ body {
     }
 
     @include media-lg-lg-2 {
-      height: 45.1rem;
+      height: 55.1rem;
+    }
+
+    @include media-xl {
+      height: 59rem;
     }
   }
 }
@@ -85,6 +89,10 @@ main {
 
     @include media-md {
       margin-bottom: 4rem;
+    }
+
+    @include media-xl {
+      margin-bottom: 7.5rem;
     }
 
     .nav {
@@ -258,8 +266,10 @@ main {
     width: 100%;
     margin-bottom: 6rem;
 
+
     @include media-md {
       display: grid;
+      //gap: 8rem;
       grid-template-columns: 1fr 1fr;
 
       .info {
@@ -280,15 +290,25 @@ main {
           height: 100%;
         }
 
-        // @include media-lg {
-        //   width: 28rem;
-        // }
+        @include media-lg-lg-2 {
+          width: 50rem;
+          margin-right: -30rem;
+          margin-left: 5rem;
+        }
       }
     }
 
     .info {
       @include media-lg-lg {
         width: 26.8rem;
+      }
+
+      @include media-lg-lg-2 {
+        width: 36rem;
+      }
+
+      @include media-xl {
+        width: 40rem;
       }
 
       @include media-md-sm {
@@ -308,6 +328,14 @@ main {
         @include media-lg {
           font-size: 3.4rem;
         }
+
+        @include media-xl {
+          font-size: 4.8rem;
+        }
+
+        @include media-lg-lg-2 {
+          font-size: 4.8rem;
+        }
       }
 
       .description {
@@ -315,6 +343,10 @@ main {
         line-height: 1.7;
         color: $grayish-violet-4;
         margin-bottom: 2rem;
+
+        @include media-lg-lg-2 {
+          font-size: 1.4rem;
+        }
       }
     }
 
@@ -338,8 +370,11 @@ main {
   }
 
   .form_section {
-    display: grid;
+    // display: grid;
+    // gap: 1.5rem;
+    display: flex;
     gap: 1.5rem;
+    flex-direction: column;
     width: 100%;
 
     .form {
@@ -354,6 +389,7 @@ main {
       gap: 1.25rem;
 
       @include media-md {
+        width: 100%;
         flex-direction: row;
         padding: 2.5rem;
         background: url('../images/bg-shorten-desktop.svg') top right;
@@ -410,6 +446,10 @@ main {
           font-size: .9rem;
           margin-bottom: 2rem;
         }
+
+        .alert_message.show {
+          display: block;
+        }
       }
 
       .shorten_link-btn {
@@ -436,7 +476,8 @@ main {
     .links {
       width: 100%;
       margin-bottom: 5.5rem;
-      display: grid;
+      display: flex;
+      flex-direction: column;
       gap: 1rem;
 
       .links-container {
@@ -451,8 +492,16 @@ main {
         }
 
         .original-link {
+          width: 100%;
           padding: .6rem 1rem;
           border-bottom: 1px solid $grayish-violet-2;
+          word-wrap: break-word;
+          word-break: break-all;
+
+          @include media-md-sm {
+            font-size: .9rem;
+            width: 100%;
+          }
 
           @include media-md {
             border-bottom: none;
@@ -460,9 +509,12 @@ main {
           }
         }
 
+
+
         .short_link-copy_btn {
           width: 100%;
-          display: grid;
+          display: flex;
+          flex-direction: column;
           gap: 1rem;
           padding: 1rem 1rem;
 
@@ -470,6 +522,7 @@ main {
             display: flex;
             align-items: center;
             justify-content: flex-end;
+            flex-direction: row;
             gap: 1rem;
             width: 40%;
             padding: 1rem 1rem;
@@ -477,6 +530,8 @@ main {
 
           .shortened-link {
             color: $cyan;
+            word-wrap: break-word;
+            word-break: break-all;
           }
 
           .copy-link {
@@ -491,8 +546,9 @@ main {
             border-radius: .4rem;
 
             @include media-md {
-              display: grid;
-              place-content: center;
+              display: flex;
+              align-items: center;
+              justify-content: center;
               padding: 1rem 2rem;
               height: 2.2rem;
             }
@@ -639,8 +695,16 @@ main {
           width: 100%;
         }
 
+        @include media-md-2 {
+          display: none;
+        }
+
         @include media-between {
           display: none;
+        }
+
+        @include media-lgg {
+          display: block;
         }
       }
     }

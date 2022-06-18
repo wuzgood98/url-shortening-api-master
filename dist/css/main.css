@@ -16,7 +16,7 @@
   transition: all .6s ease-in-out;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 751px) {
   .menu-btn {
     display: none;
   }
@@ -144,7 +144,13 @@ body .light-gray-background {
 
 @media screen and (min-width: 1420px) {
   body .light-gray-background {
-    height: 45.1rem;
+    height: 55.1rem;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  body .light-gray-background {
+    height: 59rem;
   }
 }
 
@@ -174,6 +180,12 @@ main .header {
   }
 }
 
+@media screen and (min-width: 1500px) {
+  main .header {
+    margin-bottom: 7.5rem;
+  }
+}
+
 main .header .nav {
   width: 100%;
   display: -webkit-box;
@@ -191,7 +203,7 @@ main .header .nav .logo {
   height: 2rem;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 751px) {
   main .header .nav .logo {
     height: -webkit-max-content;
     height: -moz-max-content;
@@ -209,7 +221,7 @@ main .header .nav .logo {
   }
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 751px) {
   main .header .nav .big_screen-nav .nav-content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -402,9 +414,29 @@ main .section .illustration-img .illus-img {
   }
 }
 
+@media screen and (min-width: 1420px) {
+  main .section .illustration-img .illus-img {
+    width: 50rem;
+    margin-right: -30rem;
+    margin-left: 5rem;
+  }
+}
+
 @media screen and (min-width: 1122px) {
   main .section .info {
     width: 26.8rem;
+  }
+}
+
+@media screen and (min-width: 1420px) {
+  main .section .info {
+    width: 36rem;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  main .section .info {
+    width: 40rem;
   }
 }
 
@@ -440,11 +472,29 @@ main .section .info .heading {
   }
 }
 
+@media screen and (min-width: 1500px) {
+  main .section .info .heading {
+    font-size: 4.8rem;
+  }
+}
+
+@media screen and (min-width: 1420px) {
+  main .section .info .heading {
+    font-size: 4.8rem;
+  }
+}
+
 main .section .info .description {
   font-size: 1.1rem;
   line-height: 1.7;
   color: #5f5c66;
   margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 1420px) {
+  main .section .info .description {
+    font-size: 1.4rem;
+  }
 }
 
 main .section .get_started-btn {
@@ -472,9 +522,14 @@ main .section .get_started-btn:hover {
 }
 
 main .form_section {
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   gap: 1.5rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
 }
 
@@ -497,6 +552,7 @@ main .form_section .form {
 
 @media screen and (min-width: 700px) {
   main .form_section .form {
+    width: 100%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -587,6 +643,10 @@ main .form_section .form .input-alert .alert_message {
   margin-bottom: 2rem;
 }
 
+main .form_section .form .input-alert .alert_message.show {
+  display: block;
+}
+
 main .form_section .form .shorten_link-btn {
   background: #2acfcf;
   font-size: 1.2rem;
@@ -612,8 +672,13 @@ main .form_section .form .shorten_link-btn:hover {
 main .form_section .links {
   width: 100%;
   margin-bottom: 5.5rem;
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 1rem;
 }
 
@@ -638,8 +703,18 @@ main .form_section .links .links-container {
 }
 
 main .form_section .links .links-container .original-link {
+  width: 100%;
   padding: .6rem 1rem;
   border-bottom: 1px solid rgba(158, 154, 167, 0.501);
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+@media screen and (max-width: 700px) {
+  main .form_section .links .links-container .original-link {
+    font-size: .9rem;
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 700px) {
@@ -651,8 +726,13 @@ main .form_section .links .links-container .original-link {
 
 main .form_section .links .links-container .short_link-copy_btn {
   width: 100%;
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 1rem;
   padding: 1rem 1rem;
 }
@@ -668,6 +748,10 @@ main .form_section .links .links-container .short_link-copy_btn {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     gap: 1rem;
     width: 40%;
     padding: 1rem 1rem;
@@ -676,6 +760,8 @@ main .form_section .links .links-container .short_link-copy_btn {
 
 main .form_section .links .links-container .short_link-copy_btn .shortened-link {
   color: #2acfcf;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 main .form_section .links .links-container .short_link-copy_btn .copy-link {
@@ -692,9 +778,15 @@ main .form_section .links .links-container .short_link-copy_btn .copy-link {
 
 @media screen and (min-width: 700px) {
   main .form_section .links .links-container .short_link-copy_btn .copy-link {
-    display: -ms-grid;
-    display: grid;
-    place-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 1rem 2rem;
     height: 2.2rem;
   }
@@ -877,9 +969,21 @@ main .stats_content .blue-line {
   }
 }
 
+@media screen and (min-width: 751px) {
+  main .stats_content .blue-line {
+    display: none;
+  }
+}
+
 @media (min-width: 751px) and (max-width: 1419px) {
   main .stats_content .blue-line {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1420px) {
+  main .stats_content .blue-line {
+    display: block;
   }
 }
 
