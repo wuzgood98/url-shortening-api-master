@@ -36,7 +36,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Shortly URL shortening API](https://github.io/wuzgood98/url-shortening-api-master)
-- Live Site URL: [Shortly URL shortening API](https://github.io/url-shortening-api-master/dist/)
+- Live Site URL: [Shortly URL shortening API](https://github.io/url-shortening-api-master/)
 
 ## My process
 
