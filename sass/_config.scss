@@ -10,12 +10,12 @@ $grayish-violet-4: hsl(258, 5%, 38%);
 $grayish-violet-5: hsl(258, 8%, 56%);
 $cyan-hover: hsl(180, 63%, 42%);
 $alert: rgb(247, 41, 41);
-$alert-border: .2rem solid $alert;
 // primary colors
 $cyan: hsl(180, 66%, 49%);
 $dark-violet: hsl(257, 27%, 26%);
 // secondary color
 $red: hsl(0, 87%, 67%);
+$alert-border: .2rem solid $red;
 // neutral colors
 $gray: hsl(0, 0%, 75%);
 $grayish-violet: hsl(257, 7%, 63%);
@@ -29,75 +29,20 @@ $font-weight-2: 700;
 $font-size: 1.125rem;
 $font-size-2: 1.56rem;
 
-
-@mixin media-sm {
-  @media screen and (min-width: 500px) {
+@mixin media-s {
+  @media screen and (min-width: 550px) {
     @content;
   }
 }
 
-@mixin media-md-sm {
-  @media screen and (max-width: 700px) {
+@mixin media-sm {
+  @media screen and (min-width: 640px) {
     @content;
   }
 }
 
 @mixin media-md {
-  @media screen and (min-width: 700px) {
-    @content;
-  }
-}
-
-@mixin media-md-m {
-  @media screen and (max-width: 750px) {
-    @content;
-  }
-}
-
-@mixin media-md-2 {
-  @media screen and (min-width: 751px) {
-    @content;
-  }
-}
-
-@mixin media-md-3 {
-  @media screen and (min-width: 800px) {
-    @content;
-  }
-}
-
-@mixin media-lgg {
-  @media screen and (min-width: 1420px) {
-    @content;
-  }
-}
-
-@mixin media-between {
-  @media (min-width: 751px) and (max-width: 1419px) {
-    @content;
-  }
-}
-
-@mixin media-between-lg {
-  @media (min-width: 700px) and (max-width: 1140px) {
-    @content;
-  }
-}
-
-@mixin media-between-2 {
-  @media (min-width: 483px) and (max-width: 500px) {
-    @content;
-  }
-}
-
-@mixin media-btn {
-  @media (min-width: 513px) and (max-width: 699px) {
-    @content;
-  }
-}
-
-@mixin media-between-3 {
-  @media (min-width: 603px) and (max-width: 701px) {
+  @media screen and (min-width: 768px) {
     @content;
   }
 }
@@ -108,32 +53,20 @@ $font-size-2: 1.56rem;
   }
 }
 
-@mixin media-lg-2 {
-  @media screen and (min-width: 1082px) {
-    @content;
-  }
-}
-
-@mixin media-lg-lg {
-  @media screen and (min-width: 1122px) {
-    @content;
-  }
-}
-
-@mixin media-lg-lg-2 {
-  @media screen and (min-width: 1420px) {
-    @content;
-  }
-}
-
 @mixin media-xl {
-  @media screen and (min-width: 1500px) {
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin media-2xl {
+  @media screen and (min-width: 1536px) {
     @content;
   }
 }
 
 @mixin transition-ease {
-  transition: all .6s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 @function set-text-color($color) {
